@@ -1,4 +1,4 @@
-# Environment variables - NEVER commit API keys
+# Environment variables 
 .env
 
 # Python
@@ -24,24 +24,18 @@ env/
 .DS_Store
 Thumbs.db
 
-# Project-specific - sensitive data
-narratives/
-State_number.xlsx
-Crash.xlsx
-*.pdf
-
 # Word lock files
 ~$*
-
-# FAISS index (regenerated from PDF)
-*.index
-ecrash_metadata.json
-ecrash_embeddings.json
 
 # Misc files
 *.png
 *.jpg
 predictions.json
-D7375D40
+
 # Windows temp files (hex-named)
 [0-9A-F][0-9A-F][0-9A-F][0-9A-F][0-9A-F][0-9A-F][0-9A-F][0-9A-F]
+
+# FAISS index (regenerated from PDF, large file)
+*.index
+ecrash_metadata.json
+ecrash_embeddings.json
