@@ -110,12 +110,11 @@ LLM_Project/
 ├── requirements.txt            # Python dependencies
 ├── README.md                   # This file
 ├── .gitignore                  # Files excluded from Git
-├── .env                        # OpenAI API key (not tracked)
-├── LA eCrash User Guide.pdf    # RAG corpus (not tracked)
-├── ecrash_faiss.index          # FAISS index (generated)
-├── ecrash_metadata.json        # Chunk metadata (generated)
-├── narratives/                 # Crash narrative Word files (not tracked)
-└── State_number.xlsx           # Input Excel with case numbers
+├── .env                        # OpenAI API key (not tracked - user must create)
+├── LA eCrash User Guide.pdf    # RAG corpus
+├── narratives/                 # Crash narrative Word files (15 sample files)
+├── State_number.xlsx           # Input Excel with State Case Numbers
+└── Crash.xlsx                  # Ground truth for evaluation
 ```
 
 
