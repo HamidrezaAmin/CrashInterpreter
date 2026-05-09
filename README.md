@@ -19,22 +19,24 @@ Crash analysts at the Center for Analytics & Research in Transportation Safety (
 
 ## Architecture
 
+```
 Excel (case numbers) -> Word file lookup -> Narrative extraction
-|
-v
+                                                 |
+                                                 v
 eCrash User Guide -> Chunking -> Embedding -> FAISS index
-|
-v
-RAG retrieval
-|
-v
-GPT-4o with structured prompt + CoT
-|
-v
-Pydantic validation -> JSON output
-|
-v
-Excel auto-fill
+                                                 |
+                                                 v
+                                         RAG retrieval
+                                                 |
+                                                 v
+                              GPT-4o with structured prompt + CoT
+                                                 |
+                                                 v
+                              Pydantic validation -> JSON output
+                                                 |
+                                                 v
+                                       Excel auto-fill
+```
 
 
 ## Tech Stack
@@ -97,8 +99,11 @@ A browser window will open with two tabs:
 - **Single Narrative:** Enter a State Case Number, the system finds the matching Word file, runs interpretation, and shows the JSON output. A "Confirm" button saves the prediction to the Excel file.
 - **Batch Processing:** Reads all case numbers from `State_number.xlsx`, processes each one, and saves results back to the Excel file.
 
+
+
 ## File Structure
 
+```
 LLM_Project/
 ├── app.py                      # Streamlit web interface
 ├── CrashInterpreter.ipynb      # Notebook with RAG pipeline build steps
@@ -111,6 +116,7 @@ LLM_Project/
 ├── ecrash_metadata.json        # Chunk metadata (generated)
 ├── narratives/                 # Crash narrative Word files (not tracked)
 └── State_number.xlsx           # Input Excel with case numbers
+```
 
 
 ## Code Design
